@@ -444,117 +444,117 @@ add_filter('tiny_mce_before_init', 'my_mce_before_init_insert_formats');
 
 
 
-// function build_section_style_string($block = []) {
-//     $block = wp_parse_args($block, [
-//         'className' => ' ',
-//         'align' => ' ',
-//     ]);
+function build_section_style_string($block = []) {
+    $block = wp_parse_args($block, [
+        'className' => ' ',
+        'align' => ' ',
+    ]);
 
-//     $classes = '';
-//     $style_string = '';
-//     if ($background_color = get_field('block_background_color')) {
-//         $style_string .= ' ' . esc_attr($background_color);
-//     }
+    $classes = '';
+    $style_string = '';
+    if ($background_color = get_field('block_background_color')) {
+        $style_string .= ' ' . esc_attr($background_color);
+    }
 
-//         if ($background_color == 'bg-img') {
-//         $style_string .= ' position-relative text-white pt-0 pb-1 ' ; // Add width to inline style
-//     }
+        if ($background_color == 'bg-img') {
+        $style_string .= ' position-relative text-white pt-0 pb-1 ' ; // Add width to inline style
+    }
 
-//     if ($theme_color = get_field('block_theme_color')) {
-//         $style_string .= ' ' . esc_attr($theme_color);
-//     }
+    if ($theme_color = get_field('block_theme_color')) {
+        $style_string .= ' ' . esc_attr($theme_color);
+    }
 
-//     if ($block_pt = get_field('block_pt')) {
-//         $style_string .= ' ' . esc_attr($block_pt);
-//     }
+    if ($block_pt = get_field('block_pt')) {
+        $style_string .= ' ' . esc_attr($block_pt);
+    }
 
-//     if ($block_pb = get_field('block_pb')) {
-//         $style_string .= ' ' . esc_attr($block_pb);
-//     }
+    if ($block_pb = get_field('block_pb')) {
+        $style_string .= ' ' . esc_attr($block_pb);
+    }
 
-//     if ($block_mt = get_field('block_mt')) {
-//           $style_string .= ' ' . esc_attr($block_mt);
-//     }
+    if ($block_mt = get_field('block_mt')) {
+          $style_string .= ' ' . esc_attr($block_mt);
+    }
 
-//     if ($block_mb = get_field('block_mb')) {
-//          $style_string .= ' ' . esc_attr($block_mb);
-//     }
-
-
-//     $style_width_string = '';
-//       if ($block_width = get_field('block_width')) {
-//          $style_width_string .= ' ' . esc_attr($block_width);
-//     }
-
-//     $style_col_pos_string = '';
-//     if ($block_column_placement = get_field('block_column_placement')) {
-//         $style_col_pos_string .= ' justify-content-' . esc_attr($block_column_placement);
-//     }
-
-//     $style_image_string = '';
-//     if ($block_image_style = get_field( 'block_image_style' )) {
-//         $style_image_string .= ' ' . esc_attr($block_image_style);
-//     }
-
-//     $img_style = $block_image_style;
-// if ($img_style == 'rounded') {
-//     $img_style = 'rounded';
-// } elseif ($img_style == 'rounded-shadow') {
-//     $img_style = 'shadow-lg border border-black rounded-5 rounded border-3';
-// } elseif ($img_style == 'border-lg') {
-//     $img_style = 'border-5 shadow-lg';
-// } elseif ($img_style == 'fill-col') {
-//     $img_style = 'p-0  img-down';
-// } else {
-//     $img_style = 'rounded mx-auto d-block border border-4 shadow-lg';
-// }
-
-//    $style_image_effect_string = '';
-//     if ($block_image_effect = get_field( 'block_image_effect' )) {
-//         $style_image_effect_string .= ' ' . esc_attr($block_image_effect);
-//     }
-//      if ($block_section_image_size = get_field( 'block_section_image_size' )) {
-//         $style_image_effect_string .= ' ' . esc_attr($block_section_image_size);
-//     }
+    if ($block_mb = get_field('block_mb')) {
+         $style_string .= ' ' . esc_attr($block_mb);
+    }
 
 
-//     $style_image_align_string = '';
-//     if ($block_image_align = get_field( 'block_align_image' )) {
+    $style_width_string = '';
+      if ($block_width = get_field('block_width')) {
+         $style_width_string .= ' ' . esc_attr($block_width);
+    }
 
-//             $img_align = $block_image_align;
-//             if ($img_align == 'top') {
-//                 $img_align = 'is-top';
-//             } elseif ($img_align == 'center') {
-//                 $img_align = 'is-center';
-//             } elseif ($img_align == 'bottom') {
-//                 $img_align = 'is-bottom';
-//             }  else {
-//                 $img_align = 'is-none';
-//             }
+    $style_col_pos_string = '';
+    if ($block_column_placement = get_field('block_column_placement')) {
+        $style_col_pos_string .= ' justify-content-' . esc_attr($block_column_placement);
+    }
+
+    $style_image_string = '';
+    if ($block_image_style = get_field( 'block_image_style' )) {
+        $style_image_string .= ' ' . esc_attr($block_image_style);
+    }
+
+    $img_style = $block_image_style;
+if ($img_style == 'rounded') {
+    $img_style = 'rounded';
+} elseif ($img_style == 'rounded-shadow') {
+    $img_style = 'shadow-lg border border-black rounded-5 rounded border-3';
+} elseif ($img_style == 'border-lg') {
+    $img_style = 'border-5 shadow-lg';
+} elseif ($img_style == 'fill-col') {
+    $img_style = 'p-0  img-down';
+} else {
+    $img_style = 'rounded mx-auto d-block border border-4 shadow-lg';
+}
+
+   $style_image_effect_string = '';
+    if ($block_image_effect = get_field( 'block_image_effect' )) {
+        $style_image_effect_string .= ' ' . esc_attr($block_image_effect);
+    }
+     if ($block_section_image_size = get_field( 'block_section_image_size' )) {
+        $style_image_effect_string .= ' ' . esc_attr($block_section_image_size);
+    }
 
 
-//         $style_image_align_string .= ' ' . esc_attr($img_align);
-//     }
+    $style_image_align_string = '';
+    if ($block_image_align = get_field( 'block_align_image' )) {
+
+            $img_align = $block_image_align;
+            if ($img_align == 'top') {
+                $img_align = 'is-top';
+            } elseif ($img_align == 'center') {
+                $img_align = 'is-center';
+            } elseif ($img_align == 'bottom') {
+                $img_align = 'is-bottom';
+            }  else {
+                $img_align = 'is-none';
+            }
+
+
+        $style_image_align_string .= ' ' . esc_attr($img_align);
+    }
 
  
 
 
-//     $styles = trim($style_string);
-//     $width = trim($style_width_string);
-//     $styleimage = trim($style_image_string);
-//     $effectimage = trim($style_image_effect_string);
-//     $alignimage = trim($style_image_align_string);
-//     $colposition = trim($style_col_pos_string);
+    $styles = trim($style_string);
+    $width = trim($style_width_string);
+    $styleimage = trim($style_image_string);
+    $effectimage = trim($style_image_effect_string);
+    $alignimage = trim($style_image_align_string);
+    $colposition = trim($style_col_pos_string);
 
-//     return [
-//         'style' => $styles,
-//         'width' => $width,
-//         'image' => $styleimage,
-//         'effect' => $effectimage,
-//         'align' => $alignimage,
-//         'col' => $colposition,
-//     ];
-// }
+    return [
+        'style' => $styles,
+        'width' => $width,
+        'image' => $styleimage,
+        'effect' => $effectimage,
+        'align' => $alignimage,
+        'col' => $colposition,
+    ];
+}
 
 
 // function ab_test_redirect() {

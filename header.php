@@ -7,7 +7,10 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-
+ <?php $head_code = get_field('head_code', 'options'); ?>
+  <?php $body_code = get_field('body_code', 'options'); ?>
+    <?php $woocoomerce_styles = get_field('woocoomerce_styles', 'options'); ?>
+  <?php echo $head_code ; ?>
  
 </head>
 
