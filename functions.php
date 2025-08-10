@@ -15,7 +15,7 @@ function musicbud_theme_enqueue_scripts() {
 
          wp_enqueue_style('boot-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', array(), '1.11.3', 'all');
 
-      wp_register_style( 'app', get_template_directory_uri() . '/dist/css/app.css', array(), '5.5', 'all' );
+      wp_register_style( 'app', get_template_directory_uri() . '/dist/css/app.css', array(), '2.5', 'all' );
     wp_enqueue_style( 'app' );
 
     // Custom scripts
