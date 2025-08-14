@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     function initializeVerticalSlider() {
 
-const swiper = new swiper('.swiper-slide-up', {
+const swiper = new Swiper('.swiper-slide-up', {
   // Optional parameters
   direction: 'vertical',
     loop: false,
